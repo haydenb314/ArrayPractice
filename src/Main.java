@@ -21,20 +21,39 @@ public class Main {
         int[] randomNums = new int[10];
         int currentRandNum;
         for (int i = 0; i < 10; i++) {
-            currentRandNum = (int) (Math.random() * 9) + 1;
+            currentRandNum = (int) (Math.random() * 10) + 1;
             randomNums[i] = currentRandNum;
         }
 
-        int[] inRange;
-
-        for (int i = 0; i < 10; i++) {
-            if (randomNums[i] >= 4 && randomNums[i] <= 10) {
-                
-            }
-
+        System.out.println("Randomly generated array:");
+        for (int i : randomNums) {
             System.out.print(i + ", ");
         }
 
+        String[] sInRangeNums;
+        int count = 0;
+        String inRange = "";
+
+        for (int i = 0; i < 10; i++) {
+            if (randomNums[i] >= 4 && randomNums[i] <= 10) {
+                count++;
+                inRange += randomNums[i] + " ";
+            }
+        }
+
+        sInRangeNums = inRange.split("\\s");
+
+        int[] inRangeNums = new int[count];
+
+        for (int i = 0; i < count; i++) {
+            inRangeNums[i] = Integer.parseInt(sInRangeNums[i]);
+        }
+
+
+        System.out.println("\n\nIn range array:");
+        for (int i : inRangeNums) {
+            System.out.print(i + ", ");
+        }
 
 
 
