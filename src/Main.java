@@ -30,25 +30,22 @@ public class Main {
             System.out.print(i + ", ");
         }
 
-        String[] sInRangeNums;
         int count = 0;
-        String inRange = "";
 
         for (int i = 0; i < 10; i++) {
             if (randomNums[i] >= 4 && randomNums[i] <= 10) {
                 count++;
-                inRange += randomNums[i] + " ";
             }
         }
 
-        sInRangeNums = inRange.split("\\s");
-
         int[] inRangeNums = new int[count];
+        int index = 0;
 
-        for (int i = 0; i < count; i++) {
-            inRangeNums[i] = Integer.parseInt(sInRangeNums[i]);
+        for (int i = 0; i < 10; i++) {
+            if (randomNums[i] >= 4 && randomNums[i] <= 10) {
+                inRangeNums[index++] = randomNums[i];
+            }
         }
-
 
         System.out.println("\n\nIn range array:");
         for (int i : inRangeNums) {
