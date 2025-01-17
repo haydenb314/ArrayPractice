@@ -6,6 +6,15 @@ public class ArrayPractice {
         int[] iArray = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
         System.out.println(Arrays.toString(reverseArray(iArray)));
         System.out.println(Arrays.toString(shiftArray(iArray)));
+
+        int[] randomArray = new int[10];
+        for (int i = 0; i < 10; i++) {
+            randomArray[i] = (int) (Math.random() * 26) +1;
+        }
+
+        System.out.println(Arrays.toString(randomArray));
+
+        System.out.println(convertToString(randomArray));
     }
 
     //first problem
@@ -34,12 +43,8 @@ public class ArrayPractice {
         String message = "";
         char[] alphabet = {'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z'};
         for (int i = 0; i < iArray.length; i++) {
-
+            message += alphabet[iArray[i] - 1];
         }
-
-
-
-        //TODO method should take random integer array and return a string with each number corresponding with a letter (ie: 1 = A)
         return message;
     }
 
