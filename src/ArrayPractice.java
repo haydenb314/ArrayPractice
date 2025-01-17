@@ -4,9 +4,17 @@ public class ArrayPractice {
     public static void main(String[] args) {
 
         int[] iArray = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
+
+        System.out.println("original array:");
+        System.out.println(Arrays.toString(iArray));
+
+        System.out.println("\nreversed array:");
         System.out.println(Arrays.toString(reverseArray(iArray)));
+
+        System.out.println("\nshifted array:");
         System.out.println(Arrays.toString(shiftArray(iArray)));
 
+        System.out.println("\nrandom array:");
         int[] randomArray = new int[10];
         for (int i = 0; i < 10; i++) {
             randomArray[i] = (int) (Math.random() * 26) +1;
@@ -14,7 +22,7 @@ public class ArrayPractice {
 
         System.out.println(Arrays.toString(randomArray));
 
-        System.out.println(convertToString(randomArray));
+        System.out.println("secret message: " + convertToString(randomArray));
     }
 
     //first problem
